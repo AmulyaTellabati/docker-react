@@ -1,9 +1,9 @@
 sudo: required
-services: 
+services:
   - docker
 
-  before_install:
-    - docker build -t amulya/docker-react -f Dockerfile.dev .
+before_install:
+  - docker build -t amulya/docker-react -f Dockerfile.dev .
 
-  script:
-    - docker run amulya/docker-react npm run test -- --coverage
+script:
+  - docker run amulya/docker-react npm run test -- --coverage
